@@ -1,0 +1,12 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# https://www.playframework.com/documentation/latest/ScalaRouting
+# ~~~~
+
+# An example controller showing a sample home page
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /beers                       controllers.BeerAPIController.getAll
+GET    /beers/:itemId           controllers.BeerAPIController.getById(itemId: Long)
+DELETE  /beers/delete/:itemId            controllers.BeerAPIController.deleteBeerById(itemId: Long)
+POST     /beers                      controllers.BeerAPIController.addNewItem
